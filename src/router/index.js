@@ -6,7 +6,6 @@ const router = createRouter({
   routes: [
     {
       path: '/',
-      component: () => import('../views/main.vue'),
       redirect: { name: 'findmusic' },
       children: [
         {
