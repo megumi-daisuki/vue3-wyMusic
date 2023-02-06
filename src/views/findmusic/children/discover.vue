@@ -112,7 +112,7 @@ const getBanners = async () => {
 // 获取推荐歌单
 const getPersonSong = async () => {
 
-    if (isLogin) {
+    if (isLogin.value) {
 
         let res = await getPersonalizedDay();
 
