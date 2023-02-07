@@ -2,7 +2,7 @@
     <div class="container">
         <el-col :span="4" class="logo">
             <img src="../assets/img/logo.png" alt="">
-            网易云音乐
+            <span>网易云音乐</span>
         </el-col>
         <el-col :span="3" class="arrow">
             <div @click="topre">

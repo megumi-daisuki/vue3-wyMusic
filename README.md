@@ -1,28 +1,24 @@
-# vue3-wyMusic
+# 描述
 
-This template should help get you started developing with Vue 3 in Vite.
+基于vue3全家桶开发的仿照网易云音乐桌面客户端的一个web端应用。技术栈：vue3全家桶 + axios + Element-plus + less + qrcode.js
 
-## Recommended IDE Setup
+此项目的后端接口借用了[这个项目](https://github.com/Binaryify/NeteaseCloudMusicApi)
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+第一次做这种偏大型项目，有很多地方写的不是很好,现已部署在我的个人服务器上。[点击跳转](http://39.101.77.127/)
 
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
+## 安装依赖
 
 ```sh
 npm install
 ```
 
-### Compile and Hot-Reload for Development
+### 本地运行
 
 ```sh
 npm run dev
 ```
 
-### Compile and Minify for Production
+### 打包构建
 
 ```sh
 npm run build
