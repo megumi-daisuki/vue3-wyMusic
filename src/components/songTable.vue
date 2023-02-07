@@ -87,9 +87,9 @@ const playerStore = usePlayerStore()
 // 双击播放
 const playMusic = async (row, column) => {
     // 获取url
-    playerStore.saveSongUrl(row.id);
-    playerStore.saveNowSong(row.id);
-    playerStore.addPlayingList(row.id);
+    await playerStore.saveSongUrl(row.id);
+    await playerStore.saveNowSong(row.id);
+    await playerStore.addPlayingList(row.id);
     playerStore.isPlay = true;
     // console.log('row', row);
 };
