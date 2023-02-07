@@ -73,13 +73,13 @@ const { isLogin } = storeToRefs(loginStore)
 
 
 // 点击轮播图
-const clickBanner = (item) => {
+const clickBanner = async (item) => {
     switch (item.targetType) {
         case 1:
             // 单曲
-            playerStore.saveSongUrl(item.targetId);
-            playerStore.saveNowSong(item.targetId);
-            playerStore.addPlayingList(item.targetId);
+            await playerStore.saveSongUrl(item.targetId);
+            await playerStore.saveNowSong(item.targetId);
+            await playerStore.addPlayingList(item.targetId);
             playerStore.isPlay = true;
             break;
         case 10:
@@ -142,12 +142,12 @@ const getNewSongs = async () => {
 
 // 获取歌曲url
 const playThis = async (item) => {
-
     // 歌曲详情和链接  保存给pinia
+
+    await playerStore.saveNowSong(item.id);
+    await playerStore.saveSongUrl(item.id);
+    await playerStore.addPlayingList(item.id);
     playerStore.isPlay = true;  //播放
-    playerStore.saveNowSong(item.id);
-    playerStore.saveSongUrl(item.id);
-    playerStore.addPlayingList(item.id);
 }
 
 
@@ -159,19 +159,12 @@ const tomvdetail = (MVId) => {
     })
 }
 
-
 // 初始化函数
 
 getBanners();
 getPersonSong();
 getPrivatecontents();
 getNewSongs()
-
-
-
-
-
-
 
 </script>
     
