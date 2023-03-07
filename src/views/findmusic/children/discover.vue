@@ -1,7 +1,7 @@
 <template>
     <div class="main-view">
         <!-- 轮播图 -->
-        <el-carousel :interval="4000" type="card" height="200px">
+        <el-carousel :interval="4000" type="card" height="12rem">
             <el-carousel-item v-for="item in banner" :key="item" @click="clickBanner(item)">
                 <div class="banneritem">
                     <el-image :src="item.imageUrl" alt="" />
@@ -11,7 +11,7 @@
         </el-carousel>
 
         <h1>推荐歌单</h1>
-        <songlistTable :songlist="songlist" width="250px"></songlistTable>
+        <songlistTable :songlist="songlist" width="15rem"></songlistTable>
 
         <h1>独家放送</h1>
         <div class="personal-content">
@@ -181,7 +181,6 @@ getNewSongs()
         position: relative;
 
         .el-carousel {
-
             img {
                 width: 100%;
                 height: 100%;
@@ -206,7 +205,7 @@ getNewSongs()
         padding-bottom: 15px;
 
         .el-card {
-            width: 380px;
+            width: 16.7rem;
             cursor: pointer;
 
             .img-container {

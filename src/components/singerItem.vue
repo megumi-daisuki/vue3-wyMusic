@@ -40,8 +40,8 @@ const toSingerdetail = () => {
 <style lang="less" scoped>
 .img-contain {
     position: relative;
-    height: 180px;
-    width: 180px;
+    height: 10rem;
+    width: 10rem;
     cursor: pointer;
 
     .mask3 {
@@ -60,9 +60,9 @@ const toSingerdetail = () => {
             border: 1px solid #fff;
         }
     }
-
-
 }
+
+
 
 .el-image {
     border-radius: 5px;

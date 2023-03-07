@@ -19,8 +19,8 @@
                 </span>
             </header>
             <div class="list-container">
-                <el-table empty-text="暂时没有歌曲" height="75vh" :data="playerStore.playingList" style="width: 100%"
-                    class="list" @row-dblclick="dbclickPlay">
+                <el-table empty-text="暂时没有歌曲" height="75vh" :data="playerStore.playingList" style="width: 100%" class="list"
+                    @row-dblclick="dbclickPlay">
                     <el-table-column width="55">
                         <template v-slot="scope">
                             <span v-if="scope.row.id == playerStore.nowSong.id">
@@ -150,17 +150,18 @@ watch(() => playerStore.playingList.length, () => {
 <style lang="less" scoped>
 .musiclist-container {
     position: absolute;
-    bottom: 70px;
+    bottom: 3rem;
     right: 0;
-    height: calc(100vh - 130px);
+
+    width: 30rem;
     background-color: #fff;
     border-left: 1px solid #409eff;
     transition: right 0.3s;
 
     nav {
         width: 100%;
-        height: 24px;
-        margin-top: 10px;
+        height: 2rem;
+        margin-top: 1rem;
 
         .tab {
             .active {
@@ -179,31 +180,28 @@ watch(() => playerStore.playingList.length, () => {
 
     .musiclist {
 
-        height: calc(100% - 78px);
-
         header {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            height: 24px;
-            margin: 10px 0;
-            padding: 10px 0;
+            height: 2rem;
+            margin: 1rem 0;
+
             border-bottom: 1px solid #eee;
 
             h4 {
                 color: #000;
-                padding: 0 10px;
+                padding: 0 1rem;
             }
 
             span {
-                margin-right: 15px;
+                margin-right: 1.5rem;
 
                 &:hover {
                     color: #409eff;
                 }
             }
         }
-
     }
 }
 

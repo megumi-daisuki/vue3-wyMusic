@@ -4,7 +4,7 @@ import { createPinia } from 'pinia'
 import App from './App.vue'
 import router from './router'
 import './styles/index.css'
-
+import './config/rem'
 
 
 // 引入注册饿了么图标库

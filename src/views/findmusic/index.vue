@@ -59,13 +59,13 @@ const changeRouter = (name) => {
 <style lang="less" scoped>
 .viewport {
 
-    width: 1200px;
-    margin: 10px auto;
+    width: 53rem;
+    margin: 1rem auto;
 
     &::after {
         content: '';
         display: table;
-        height: 20px;
+        height: 1rem;
     }
 }
 </style>

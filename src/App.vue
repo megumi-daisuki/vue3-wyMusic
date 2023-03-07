@@ -5,7 +5,7 @@
         <mainHeader></mainHeader>
       </el-header>
       <el-container>
-        <el-aside width="200px">
+        <el-aside width="10rem">
           <mainAside></mainAside>
         </el-aside>
         <el-main>
@@ -61,10 +61,6 @@ provide('backtop', backtop)
       display: block;
       height: 120px;
     }
-  }
-
-  .footer {
-    height: 70px !important;
   }
 }
 </style>

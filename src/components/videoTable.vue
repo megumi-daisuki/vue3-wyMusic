@@ -1,8 +1,8 @@
 <template>
     <div class="video-container">
-        <el-card :body-style="{ padding: '0px' }" class="card" shadow="never" v-for="item in videoList" :key="item.vid">
+        <div class="card" shadow="never" v-for="item in videoList" :key="item.vid">
             <videoItem :item="item"></videoItem>
-        </el-card>
+        </div>
     </div>
 </template>
     
@@ -23,12 +23,7 @@ const props = defineProps({
     flex-wrap: wrap;
 
 
-    .card {
-        width: 300px;
-        height: 235px;
-        border: none;
-        margin: 10px 30px;
-    }
+    
 
 }
 </style>

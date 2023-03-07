@@ -3,8 +3,8 @@
         :infinite-scroll-disabled="noMore">
         <nav class="middle">
             <div class="navlist middle">
-                <div class="navitem" v-for="(item, index) in navlist" :key="index"
-                    :class="{ active1: index == currentNav }" @click="changeNavItem(item)">
+                <div class="navitem" v-for="(item, index) in navlist" :key="index" :class="{ active1: index == currentNav }"
+                    @click="changeNavItem(item)">
                     {{ item.name }}</div>
             </div>
         </nav>

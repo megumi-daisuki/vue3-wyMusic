@@ -6,10 +6,11 @@ html {
     -ms-scroll-rails: none;
     -ms-content-zoom-limit-min: 100%;
     -ms-content-zoom-limit-max: 500%;
-    -ms-scroll-snap-type: proximity;
-    -ms-scroll-snap-points-x: snapList(100%, 200%, 300%, 400%, 500%);
+    /* -ms-scroll-snap-type: proximity; */
+    /* -ms-scroll-snap-points-x: snapList(100%, 200%, 300%, 400%, 500%); */
     -ms-overflow-style: none;
-    overflow: auto
+    overflow: auto;
+
 }
 
 #app {
@@ -23,6 +24,9 @@ img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    /* 解决img撑大父盒子 */
+    vertical-align: bottom;
+
 }
 
 h1,

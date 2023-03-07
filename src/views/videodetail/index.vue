@@ -18,14 +18,12 @@
                 <div class="videodetail">
                     <h1>
                         {{ videoData.title }}
-                        <span class="showdes middle" v-if="!showdes && videoData.description"
-                            @click="showdes = !showdes">
+                        <span class="showdes middle" v-if="!showdes && videoData.description" @click="showdes = !showdes">
                             <el-icon>
                                 <CaretBottom />
                             </el-icon>
                         </span>
-                        <span class="showdes middle" v-if="showdes && videoData.description"
-                            @click="showdes = !showdes">
+                        <span class="showdes middle" v-if="showdes && videoData.description" @click="showdes = !showdes">
                             <el-icon>
                                 <CaretTop />
                             </el-icon>
@@ -159,11 +157,11 @@ watch(() => route.params.videoId, (newVale, oldValue) => {
 .main-container {
     display: flex;
     justify-content: center;
-    min-width: 1000px;
+    width: 100%;
 
     .left-video {
-        width: 650px;
-        margin-right: 25px;
+        width: 30rem;
+        margin-right: 2.5rem;
 
         h5 {
             display: flex;
@@ -253,6 +251,7 @@ watch(() => route.params.videoId, (newVale, oldValue) => {
                     display: flex;
                     justify-content: space-between;
                     align-items: center;
+                    flex-wrap: wrap;
 
                     a {
                         font-size: 13px;
@@ -284,7 +283,7 @@ watch(() => route.params.videoId, (newVale, oldValue) => {
     }
 
     .right-command {
-        width: 325px;
+        width: 30rem;
 
         h5 {
             height: 40px;
@@ -292,7 +291,6 @@ watch(() => route.params.videoId, (newVale, oldValue) => {
             color: #333;
             font-size: 15px;
             font-weight: bold;
-
         }
 
         .simivideos {
@@ -305,8 +303,8 @@ watch(() => route.params.videoId, (newVale, oldValue) => {
                     cursor: pointer;
 
                     img {
-                        height: 100px;
-                        width: 200px;
+                        height: 5rem;
+                        width: 10rem;
                         border-radius: 5px;
 
                     }

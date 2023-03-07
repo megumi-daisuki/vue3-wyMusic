@@ -90,17 +90,17 @@ h2 {
     margin-top: 20px;
 
     .card {
-        width: 220px;
-        margin: 0 12.5px 20px;
+        width: 10rem;
+        margin: 12.5px 20px;
         cursor: pointer;
 
-        &:nth-of-type(5n) {
-            margin-right: 0;
-        }
+        // &:nth-of-type(5n) {
+        //     margin-right: 0;
+        // }
 
-        &:nth-of-type(5n+1) {
-            margin-left: 0;
-        }
+        // &:nth-of-type(5n+1) {
+        //     margin-left: 0;
+        // }
 
         .img-div {
             position: relative;

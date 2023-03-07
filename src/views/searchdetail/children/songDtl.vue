@@ -2,7 +2,7 @@
     <div class="song-detail-container">
         <!-- 列表 -->
         <div class="song-table">
-            <div v-loading="loading">
+            <div v-loading="loading" class="table-container">
                 <songTable :songlist="songlist"></songTable>
             </div>
 
@@ -44,7 +44,15 @@ getSongList();
     
 <style lang="less" scoped>
 .song-detail-container {
+    width: 100%;
+
+
     .song-table {
+        .table-container {
+            width: 100%;
+            height: 100%;
+        }
+
         .pagination-container {
 
             margin-top: 20px;

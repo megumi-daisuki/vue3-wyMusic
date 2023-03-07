@@ -6,15 +6,15 @@
         <div class="song-info-container">
             <div class="song-info">
                 <div class="song">
-                    <img :src="getImgUrl" alt="" style="width: 60px;height: 60px;">
+                    <img :src="getImgUrl" alt="" style="width: 3rem;">
                     <div class="open-detail">
-                        <el-icon size="20px">
+                        <el-icon size="1rem">
                             <ArrowUpBold />
                         </el-icon>
                     </div>
                 </div>
                 <div class="singer-info">
-                    <p class="songname">{{ playerStore.nowSong.name || '网易云音乐' }}</p>
+                    <p class="songname">{{ playerStore.nowSong.name || '听什么歌呢' }}</p>
                     <p class="singer" v-if="Object.keys(playerStore.nowSong).length">{{
                         playerStore.nowSong.ar[0].name
                     }}</p>
@@ -341,12 +341,12 @@ window.addEventListener('unload', () => {
     position: fixed;
     align-items: center;
     bottom: 0;
-    height: 70px;
+    height: 3rem;
     width: 100%;
     z-index: 99;
     background-color: #f8f8ff;
 
-    padding: 0 5px;
+    padding: 0 0.5rem;
 
     audio {
         display: line-block;
@@ -362,8 +362,12 @@ window.addEventListener('unload', () => {
             align-items: center;
 
             .singer-info {
+
+
                 .songname {
-                    width: 100px;
+                    width: 8rem;
+                    font-size: 0.8rem;
+                    text-indent: 4px;
                     white-space: nowrap;
                     overflow: hidden;
                     text-overflow: ellipsis
@@ -371,7 +375,7 @@ window.addEventListener('unload', () => {
             }
 
             .marg {
-                padding: 5px;
+                padding: 0.5rem;
                 cursor: pointer;
 
                 &:hover {
@@ -381,7 +385,7 @@ window.addEventListener('unload', () => {
 
             .song {
                 position: relative;
-                width: 60px;
+                width: 6rem;
 
                 &:hover .open-detail {
                     position: absolute;
@@ -404,7 +408,7 @@ window.addEventListener('unload', () => {
             }
 
             .singer-info {
-                padding-right: 30px;
+                padding-right: 3rem;
             }
 
         }
@@ -414,16 +418,16 @@ window.addEventListener('unload', () => {
     .player-center {
         display: flex;
         flex: 1;
-        margin-left: 20px;
+        margin-left: 2rem;
 
         .change-play {
             width: 10%;
 
             .check-box {
-                width: 25px;
-                height: 30px;
-                margin: 0 10px;
-                font-size: 18px;
+                width: 2.5rem;
+                height: 3rem;
+                margin: 0 1rem;
+                font-size: 1rem;
                 cursor: pointer;
 
                 &:hover {
@@ -432,9 +436,10 @@ window.addEventListener('unload', () => {
             }
 
             .play-box {
-                width: 42px;
-                height: 42px;
-                font-size: 28px;
+                width: 3.2rem;
+                height: 3rem;
+                font-size: 1.5rem;
+                font-weight: 700;
                 cursor: pointer;
 
                 &:hover {
@@ -447,10 +452,10 @@ window.addEventListener('unload', () => {
         // 进度条
         .play-progress {
             flex: 1;
-            height: 70px;
+            height: 3rem;
 
             span {
-                padding: 0 10px;
+                padding: 0 1rem;
             }
 
             .progress-bar {
@@ -463,8 +468,8 @@ window.addEventListener('unload', () => {
             width: 6%;
 
             span {
-                width: 25px;
-                margin: 0 5px;
+                width: 2.5rem;
+                margin: 0 0.5rem;
 
                 &:hover {
                     color: #409eff;
@@ -473,13 +478,13 @@ window.addEventListener('unload', () => {
 
             .icon-orderplay,
             .icon-random {
-                font-size: 18px;
+                font-size: 1rem;
                 // font-weight: 700;
             }
 
             .icon-repeat,
             .icon-lyrics {
-                font-size: 18px;
+                font-size: 1rem;
                 font-weight: 700;
             }
         }
@@ -489,19 +494,20 @@ window.addEventListener('unload', () => {
             width: 20%;
 
             .sound {
-                padding-right: 8px;
+                padding: 0 0.8rem;
             }
 
             .icon-loud,
             .icon-mute {
-                font-size: 20px;
+                font-size: 1rem;
                 font-weight: 700;
-                padding-right: 10px;
+                // padding-right: 1rem;
             }
 
             .icon-musiclist {
-                font-size: 18px;
-                padding-left: 20px;
+                font-size: 1em;
+                padding: 0 1rem;
+
             }
 
             .v-progress {
@@ -509,8 +515,8 @@ window.addEventListener('unload', () => {
 
                 // 音量球大小
                 :deep(.el-slider__button) {
-                    width: 16px;
-                    height: 16px;
+                    width: 1em;
+                    height: 1em;
                 }
             }
 

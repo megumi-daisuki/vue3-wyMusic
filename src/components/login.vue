@@ -15,23 +15,24 @@
             <img src="../assets/img/logo.png" alt="">
         </div>
         <div class="form">
-            <el-form ref="formRef" :model="form" :rules="rules" label-width="60px">
+            <el-form ref="formRef" :model="form" :rules="rules">
                 <el-form-item prop="PhoneNum">
                     <el-input type="tlephone" v-model.number="form.PhoneNum" placeholder="请输入手机号"></el-input>
                 </el-form-item>
                 <el-form-item prop="verifycode">
                     <el-input type="text" v-model="form.verifycode" placeholder="请输入验证码">
                         <template #append>
-                            <el-button @click="getVercodeF" :disabled="disabled">获取验证码 <span v-if="showTime">({{
-                                time
-                            }})</span></el-button>
+                            <el-button class="yzcode" @click="getVercodeF" :disabled="disabled">验证码<span v-if="showTime"
+                                    style="font-size: 0.1rem;">({{
+                                        time
+                                    }})</span></el-button>
                         </template>
                     </el-input>
                 </el-form-item>
-                <el-form-item label-width="170px">
+                <el-form-item>
                     <el-button @click="login" type="primary">登录</el-button>
                 </el-form-item>
-                <el-form-item label-width="170px">
+                <el-form-item>
                     <el-button>注册</el-button>
                 </el-form-item>
             </el-form>
@@ -253,11 +254,12 @@ const polling = async () => {
     
 <style lang="less" scoped>
 .login-verifycode {
-    width: 400px;
-    height: 500px;
-    position: absolute;
-    top: 150px;
+    width: 25rem;
+    height: 35rem;
+    position: fixed;
+    top: 3rem;
     right: 50%;
+    translate: 50% 0;
     background-color: #fff;
     border-radius: 5px;
     box-shadow: -2px 1px 1px #ccc;
@@ -265,7 +267,7 @@ const polling = async () => {
 
     .close-container {
         position: relative;
-        height: 20px;
+        height: 2rem;
 
         .close {
             position: absolute;
@@ -281,8 +283,8 @@ const polling = async () => {
             cursor: pointer;
 
             img {
-                width: 50px;
-                height: 50px;
+                width: 3rem;
+                height: 3rem;
                 transform: rotate(180deg);
                 vertical-align: bottom
             }
@@ -293,13 +295,28 @@ const polling = async () => {
 
     h5 {
         text-align: center;
-        font-size: 20px;
-        margin: 20px 0;
+        font-size: 1rem;
+
         font-weight: bolder;
     }
 
+    .form {
+        .el-form-item {
+            padding: 0 5rem;
+
+            &/deep/.el-form-item__content {
+
+                justify-content: center;
+            }
+
+            .yzcode {
+                width: 3rem;
+            }
+        }
+    }
+
     .img {
-        margin: 10px 0 30px;
+        margin: 1rem 0 3rem;
 
         img {
             width: 80px;
@@ -308,17 +325,16 @@ const polling = async () => {
         }
     }
 
-    .form {
-        padding-right: 60px;
-    }
+
 }
 
 .login-qr {
-    width: 400px;
-    height: 500px;
-    position: absolute;
-    top: 150px;
+    width: 25rem;
+    height: 35rem;
+    position: fixed;
+    top: 3rem;
     right: 50%;
+    translate: 50% 0;
     background-color: #fff;
     border-radius: 5px;
     box-shadow: -2px 1px 1px #ccc;
@@ -326,9 +342,9 @@ const polling = async () => {
 
     h5 {
         text-align: center;
-        font-size: 20px;
+        font-size: 1rem;
         font-weight: bolder;
-        margin: 20px 0;
+        margin: 2rem 0;
     }
 
     .close-container {
@@ -346,8 +362,8 @@ const polling = async () => {
 
     .qrimg {
         position: relative;
-        width: 250px;
-        height: 250px;
+        width: 10rem;
+        height: 10rem;
         margin: auto;
 
 
@@ -377,9 +393,9 @@ const polling = async () => {
     }
 
     p {
-        margin-top: 20px;
+        margin-top: 1rem;
         text-align: center;
-        font-size: 15px;
+        font-size: 0.5rem;
         letter-spacing: 1px;
         cursor: default;
 
@@ -390,8 +406,8 @@ const polling = async () => {
 
     h4 {
         text-align: center;
-        font-size: 15px;
-        margin: 40px 0;
+        font-size: 0.5rem;
+        margin: 0.5rem 0;
         color: #ccc;
         cursor: pointer;
 

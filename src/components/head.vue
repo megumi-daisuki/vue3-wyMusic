@@ -2,7 +2,7 @@
     <div class="container">
         <el-col :span="4" class="logo">
             <img src="../assets/img/logo.png" alt="">
-            <span>网易云音乐</span>
+            <span>音乐logo</span>
         </el-col>
         <el-col :span="3" class="arrow">
             <div @click="topre">
@@ -23,7 +23,7 @@
             <!-- 历史记录 -->
             <ul class="songList" id="songList" v-show="isShowHotSearchList">
                 <div class="history" id="history" v-if="keywordsArr.length">
-                    <div style="line-height:20px;height: 20px;padding: 10px 0;">
+                    <div style="line-height:1rem;height: 1rem;padding: 0.5rem 0;">
                         <span style="font-size: 15px;">历史记录</span>
                         <span class="deleteHistory" @click="deleteHistory">
                             <el-icon size="16px">
@@ -32,7 +32,7 @@
                         </span>
                     </div>
                     <el-tag v-for="tag in keywordsArr" :key="tag" closable @close="deleteTag(tag)"
-                        @click="searchHistory(tag)" style="cursor: pointer;margin: 0 5px 5px;">
+                        @click="searchHistory(tag)" style="cursor: pointer;margin: 0 0.5rem 0.5rem;">
                         {{ tag }}
                     </el-tag>
                 </div>
@@ -44,7 +44,6 @@
                             <span :class="(index < 3 || index === 0 ? 'hotsearchword' : '')">{{
                                 item.searchWord
                             }}</span>
-                            <span style="color: #999;margin-left: 5px;font-size: 12px;">{{ item.score }}</span>
 
                         </div>
                         <h5 v-if="item.content">{{ item.content }}</h5>
@@ -52,7 +51,7 @@
                 </li>
             </ul>
         </el-col>
-        <el-col :span="12" class="login-container">
+        <el-col :span="11" class="login-container">
             <div class="login" @click="showLoginForm = true" v-if="!isLogin">
                 <img src="../assets/img/logo.png" alt="">
                 <span>未登录</span>
@@ -214,23 +213,26 @@ onMounted(() => {
     .logo {
 
         height: 100%;
-        text-indent: 5px;
-        font-size: 18px;
+        text-indent: 0.5rem;
         color: #ccc;
 
         img {
-
-            width: 40px;
             height: 40px;
-            border-radius: 15px;
+            width: 40px;
+            border-radius: 50%;
+        }
+
+        span {
+            font-size: 0.8rem;
         }
     }
 
     .arrow {
-        font-size: 20px;
+        margin: 0 2rem;
+        font-size: 1rem;
 
         div {
-            margin: auto 20px;
+            margin: auto 1.2rem;
             cursor: pointer;
 
             &:hover {
@@ -241,6 +243,10 @@ onMounted(() => {
 
     .search-container {
         position: relative;
+
+        .el-input {
+            font-size: 0.8rem;
+        }
 
         .songList {
             position: absolute;
@@ -254,7 +260,7 @@ onMounted(() => {
 
             .history {
                 span {
-                    padding: 0 10px;
+                    padding: 0 1rem;
                 }
 
                 .deleteHistory {
@@ -268,25 +274,25 @@ onMounted(() => {
             }
 
             h4 {
-                font-size: 18px;
+                font-size: 1rem;
                 color: black;
                 text-indent: 20px;
-                margin: 5px 0;
+                margin: 0.5rem 0;
             }
 
             li {
                 display: flex;
-                height: 45px;
-                padding: 5px 0;
+                height: 2.5rem;
+                padding: 0.5rem 0;
 
-                font-size: 16px;
+                font-size: 0.5rem;
                 text-indent: 6px;
-                margin-top: 10px;
+
                 cursor: pointer;
 
                 .index {
                     width: 20%;
-                    font-size: 20px;
+                    font-size: 0.5rem;
 
                 }
 
@@ -300,14 +306,15 @@ onMounted(() => {
                     justify-content: space-around;
                     height: 100%;
                     width: 100%;
-                    font-size: 13px;
+
 
                     .hotsearchword {
                         font-weight: bold;
+                        font-size: 0.2rem;
                     }
 
                     h5 {
-                        font-size: 12px;
+                        font-size: 0.1rem;
                         color: #999;
                     }
                 }
@@ -348,7 +355,7 @@ onMounted(() => {
             }
 
             span {
-                margin-left: 20px;
+                margin-left: 2rem;
 
 
             }

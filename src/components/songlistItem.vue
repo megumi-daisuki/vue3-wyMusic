@@ -1,5 +1,5 @@
 <template>
-    <div class="main-container" @click="toSonglistDetail" :style="{width}">
+    <div class="main-container" @click="toSonglistDetail" :style="{ width }">
         <div class="img-contain" @mouseenter="showM" @mouseleave="closeM">
             <el-image :src="item.coverImgUrl || item.picUrl" alt="" lazy />
             <transition name="el-fade-in-linear">
@@ -51,10 +51,10 @@ const toSonglistDetail = () => {
 <style lang="less" scoped>
 .main-container {
     position: relative;
-    width: 225px;
+    width: 15rem;
     box-shadow: none;
     border: none;
-    margin-bottom: 15px;
+    margin-bottom: 1rem;
 
 
 

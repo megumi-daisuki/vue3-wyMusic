@@ -1,5 +1,5 @@
 <template>
-    <div @click="toVideodetail">
+    <div @click="toVideodetail" class="main-div">
         <div class="img-div" @mouseenter="showM" @mouseleave="closeM">
             <el-image :src='item.coverUrl ?? item.imgurl ?? item.data?.coverUrl ?? item.cover' class="image" />
             <transition name="el-fade-in-linear">
@@ -76,96 +76,100 @@ const toVideodetail = () => {
         })
     }
 }
-
-
 </script>
     
 <style lang="less" scoped>
-.img-div {
-    position: relative;
-    height: 200px;
-    cursor: pointer;
+.main-div {
+    width: 12rem;
+    height: 12rem;
+    border: none;
+    margin: 1rem 30px;
 
-    .mask3 {
-        position: absolute;
-        top: 0%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
+    .img-div {
+        position: relative;
         height: 100%;
-        background: rgba(100, 100, 100, 0.3);
+        cursor: pointer;
 
-        .text {
-            text-align: center;
-            font-size: 16px;
+        .mask3 {
+            position: absolute;
+            top: 0%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            background: rgba(100, 100, 100, 0.3);
+
+            .text {
+                text-align: center;
+                font-size: 16px;
+                color: #fff;
+                padding: 8px 15px;
+                border: 1px solid #fff;
+            }
+        }
+
+        .durationms {
+            position: absolute;
+            bottom: 5px;
+            right: 5px;
+            font-size: 12px;
             color: #fff;
-            padding: 8px 15px;
-            border: 1px solid #fff;
+        }
+
+        .playTime {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            color: #fff;
+            font-size: 12px;
+        }
+
+
+
+        .image {
+            width: 100%;
+            height: 100%;
+            border-radius: 5px;
         }
     }
 
-    .durationms {
-        position: absolute;
-        bottom: 5px;
-        right: 5px;
-        font-size: 12px;
-        color: #fff;
+
+    .title {
+        font-size: 13px;
+        font-weight: bold;
+        color: #393636;
+        text-indent: 1px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        cursor: pointer;
+
+        &:hover {
+            color: #000;
+        }
+
+        .mv-sign {
+            padding: 1px 2px;
+            color: red;
+            border: 1px solid red;
+
+        }
     }
 
-    .playTime {
-        position: absolute;
-        top: 5px;
-        right: 5px;
-        color: #fff;
-        font-size: 12px;
-    }
+    .creators {
+        .by {
+            padding-right: 5px;
+        }
 
+        .creator {
+            font-size: 12px;
+            color: #ccc;
+        }
 
-
-    .image {
-        width: 100%;
-        height: 100%;
-        border-radius: 5px;
-    }
-}
-
-
-.title {
-    height: 25px;
-    line-height: 25px;
-    font-size: 13px;
-    color: #393636;
-    text-indent: 1px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    cursor: pointer;
-
-    &:hover {
-        color: #000;
-    }
-
-    .mv-sign {
-        padding: 1px 2px;
-        color: red;
-        border: 1px solid red;
-
-    }
-}
-
-.creators {
-    .by {
-        padding-right: 5px;
-    }
-
-    .creator {
-        font-size: 12px;
-        color: #ccc;
-    }
-
-    .actcreator {
-        color: #409eff;
+        .actcreator {
+            color: #409eff;
+        }
     }
 }
 </style>

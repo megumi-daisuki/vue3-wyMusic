@@ -274,16 +274,17 @@ onBeforeUnmount(() => {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        width: 40%;
-        height: 30px;
+        width: 60%;
+        height: 3rem;
 
         .active {
             color: #fe3730;
         }
 
         span {
+            
             color: #666;
-            padding: 0 4px;
+            margin-left: 10px;
             cursor: default;
 
             &:hover {

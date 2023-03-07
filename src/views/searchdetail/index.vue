@@ -68,6 +68,8 @@ watch(() => route.params.keywords, (newVale, oldValue) => {
 </script>
     
 <style lang="less" scoped>
+
+
 .search-detail::after {
     content: '';
     display: block;

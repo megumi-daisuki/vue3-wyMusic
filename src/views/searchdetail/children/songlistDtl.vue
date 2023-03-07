@@ -78,10 +78,8 @@ const toSonglistDetail = (row) => {
         }
     })
 }
+getMusicList();
 
-onMounted(() => {
-    getMusicList();
-})
 </script>
     
 <style lang="less" scoped>

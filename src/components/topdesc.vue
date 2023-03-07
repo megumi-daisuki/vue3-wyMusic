@@ -19,7 +19,7 @@
                     <span v-if="title === 'album'">歌手：</span>
                     <span style=" color: #409eff;">{{
                         mainInfo.creator?.nickname ||
-                            mainInfo.artist?.name || mainInfo.name
+                        mainInfo.artist?.name || mainInfo.name
                     }}</span>
                 </div>
                 <!-- 创建时间 -->
@@ -111,9 +111,8 @@ const toSonglist = (tagname) => {
     display: flex;
 
     .left-img {
-        width: 220px;
-        height: 220px;
-
+        width: 10rem;
+        height: 10rem;
 
         img {
             border-radius: 5px;

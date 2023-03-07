@@ -2,7 +2,7 @@
     <div class="container">
         <el-menu router background-color="#3f3c3e" text-color="#ccc" :default-active="defaultActive">
             <el-menu-item v-for="(item, index) in menuList" :key="item.path" :index="item.path">
-                <span>{{ item.label }}</span>
+                <span style="font-size: 0.5rem;">{{ item.label }}</span>
             </el-menu-item>
         </el-menu>
     </div>
@@ -26,7 +26,6 @@ watch(() => route.path, () => {
     sessionStorage.removeItem('findmusicTab')
     let pathArr = route.path.split('/');
     defaultActive.value = '/' + pathArr[1];
-
 })
 
 </script>
@@ -38,7 +37,7 @@ watch(() => route.path, () => {
 
     h4 {
         text-indent: 15px;
-        padding: 5px 0;
+        padding: 0.5rem 0;
         background-color: #3f3c3e;
         color: #ccc;
     }
